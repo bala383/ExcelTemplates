@@ -6,6 +6,15 @@ namespace API
 {
     public class Download 
     {
+          private readonly IExcelTemplateReader _excelTemplateReader;
+        public Download(
+            IExcelTemplateReader excelTemplateReader)
+            
+        {
+          
+            _excelTemplateReader = excelTemplateReader;
+            
+        }
         public async Task<ActionResult> DownloadFIle(List<T> result)
         {
                
